@@ -1,0 +1,15 @@
+﻿@{ ViewData["Title"] = "Cadastro"; }
+
+@model IdentityTeste.Models.ViewModels.ProductViewModel.ProductCadastroVM;
+
+<div>
+    <div class="text-danger" style="direction:rtl" asp-validation-summary="All"></div>
+</div>
+
+<form asp-action="Post" method="POST" asp-controller="Product">
+    <label asp-for="Name">Name</label> <input type="text" asp-for="Name" id="input_name" />
+    <label asp-for="Quantity">Quantity</label> <input type="number" asp-for="Quantity" id="input_quantity" />
+    <label asp-for="Price">Price</label> <input type="number" asp-for="Price" id="input_price" />
+
+    <button type="submit">Cadastrar</button>
+</form>

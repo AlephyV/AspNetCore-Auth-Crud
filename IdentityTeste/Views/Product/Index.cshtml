@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Listagem";
+}
+
+
+@model IEnumerable<IdentityTeste.Models.ViewModels.ProductViewModel.ProductListagemVM>;
+
+<h1>Listagem</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductID)</th>
+            <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>R$@Html.DisplayFor(modelItem => item.Price)</td>
+            <td>@Html.DisplayFor(modelItem => item.ProductID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+            <td>
+                <a asp-action="Atualizar" asp-route-id="@item.ProductID">Atualizar</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProductID">Deletar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p>@Html.ActionLink("CADASTRAR PRODUTO", "Cadastrar", "Product")</p>

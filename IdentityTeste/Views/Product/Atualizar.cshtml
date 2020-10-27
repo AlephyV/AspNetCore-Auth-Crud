@@ -1,0 +1,17 @@
+﻿@{ ViewData["Title"] = "Atualizar"; }
+
+@model IdentityTeste.Models.ViewModels.ProductViewModel.ProductAtualizarVM;
+
+<div>
+    <div class="text-danger" style="direction:rtl" asp-validation-summary="All"></div>
+</div>
+
+<form asp-action="Put" method="POST">
+    <input type="hidden" name="ProductID" value="@Model.ProductID"
+    <label asp-for="Name">Name</label> <input type="text" value="@Model.Name" asp-for="Name" id="input_name" />
+    <label asp-for="Quantity">Quantity</label> <input type="number" value="@Model.Quantity" asp-for="Quantity" id="input_quantity" />
+    <label asp-for="Price">Price</label> <input type="number" value="@Model.Price" asp-for="Price" id="input_price" />
+
+    <button type="submit">Atualizar</button>
+</form>
+
