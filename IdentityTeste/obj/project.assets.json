@@ -14,6 +14,54 @@
           "lib/netstandard2.0/Dapper.dll": {}
         }
       },
+      "Dapper.FluentMap/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.35"
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.FluentMap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.FluentMap.dll": {}
+        }
+      },
+      "Dapper.FluentMap.Dommel/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.35",
+          "Dapper.FluentMap": "2.0.0",
+          "Dommel": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.FluentMap.Dommel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.FluentMap.Dommel.dll": {}
+        }
+      },
+      "Dommel/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.35",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Dommel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dommel.dll": {}
+        }
+      },
+      "LiteDB/5.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2650,6 +2698,15 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Oracle.ManagedDataAccess/19.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2975,13 +3032,13 @@
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
-      "System.ComponentModel.Annotations/4.5.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.0/_._": {}
+          "ref/netstandard2.0/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.0/_._": {}
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -4356,6 +4413,65 @@
         "lib/net461/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Dapper.FluentMap/2.0.0": {
+      "sha512": "UFSBuYreRQqOQfzSJ2HOnLvBolg5VFfBjS30ohM8DT4Yra/m+bEKAjVTmCBM1VDahWsPSsKqjX5eLR37MB/O+Q==",
+      "type": "package",
+      "path": "dapper.fluentmap/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.fluentmap.2.0.0.nupkg.sha512",
+        "dapper.fluentmap.nuspec",
+        "lib/netstandard2.0/Dapper.FluentMap.dll",
+        "lib/netstandard2.0/Dapper.FluentMap.xml"
+      ]
+    },
+    "Dapper.FluentMap.Dommel/2.0.0": {
+      "sha512": "6qktNqAaxz/pJRqewU9ox0Sx3jyQUP+adYbFjxuYMjU5dofpcWzGZYCnv088FrOGs1h3qEZ3dv0Ec7YT0l3IYw==",
+      "type": "package",
+      "path": "dapper.fluentmap.dommel/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.fluentmap.dommel.2.0.0.nupkg.sha512",
+        "dapper.fluentmap.dommel.nuspec",
+        "lib/netstandard2.0/Dapper.FluentMap.Dommel.dll",
+        "lib/netstandard2.0/Dapper.FluentMap.Dommel.xml"
+      ]
+    },
+    "Dommel/2.1.0": {
+      "sha512": "On4oTiGtDpqL0C1RHwYqwkrLT4r+ZptkgtLZjrJwqyzDB3MfhrzbV0vCYtoqYCmuCjnle74zvF9C3711g4ZUig==",
+      "type": "package",
+      "path": "dommel/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dommel.2.1.0.nupkg.sha512",
+        "dommel.nuspec",
+        "lib/netstandard2.0/Dommel.dll",
+        "lib/netstandard2.0/Dommel.xml"
+      ]
+    },
+    "LiteDB/5.0.9": {
+      "sha512": "cWnNWXL+qaP/qrkUCYZHBUJcv+IsfJfofa+Ed4EyT0zs/gkXqfKvjTbS3uSMBfcd9I7Yf+q9YPmCpmVFrVGQtw==",
+      "type": "package",
+      "path": "litedb/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.9.nupkg.sha512",
+        "litedb.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -7138,6 +7254,30 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "Oracle.ManagedDataAccess/19.9.0": {
+      "sha512": "3lz/XZRr3VB6SnDPGbFYkLuImMgtGzc2sYdZ9+Pc7txyBwq+Uke9CY9HR2mU23J8YT4Oud9tt9cbDzqYCNEsng==",
+      "type": "package",
+      "path": "oracle.manageddataaccess/19.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PerfCounters/register_odpm_perfmon_counters.ps1",
+        "PerfCounters/unregister_odpm_perfmon_counters.ps1",
+        "bin/x64/Oracle.ManagedDataAccessIOP.dll",
+        "bin/x86/Oracle.ManagedDataAccessIOP.dll",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/App.config.uninstall.xdt",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "content/net40/Web.config.uninstall.xdt",
+        "info.txt",
+        "lib/net40/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.19.9.0.nupkg.sha512",
+        "oracle.manageddataaccess.nuspec",
+        "readme.txt"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -7767,10 +7907,10 @@
         "system.collections.specialized.nuspec"
       ]
     },
-    "System.ComponentModel.Annotations/4.5.0": {
-      "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
+    "System.ComponentModel.Annotations/4.7.0": {
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "type": "package",
-      "path": "system.componentmodel.annotations/4.5.0",
+      "path": "system.componentmodel.annotations/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7781,11 +7921,11 @@
         "lib/net45/_._",
         "lib/net461/System.ComponentModel.Annotations.dll",
         "lib/netcore50/System.ComponentModel.Annotations.dll",
-        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
         "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
         "lib/portable-net45+win8/_._",
-        "lib/uap10.0.16299/_._",
         "lib/win8/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
@@ -7807,7 +7947,6 @@
         "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
         "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
         "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
         "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
@@ -7843,14 +7982,15 @@
         "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
         "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
         "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
         "ref/portable-net45+win8/_._",
-        "ref/uap10.0.16299/_._",
         "ref/win8/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.5.0.nupkg.sha512",
+        "system.componentmodel.annotations.4.7.0.nupkg.sha512",
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11909,9 +12049,14 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Dapper >= 2.0.35",
+      "Dapper.FluentMap >= 2.0.0",
+      "Dapper.FluentMap.Dommel >= 2.0.0",
+      "Dommel >= 2.1.0",
+      "LiteDB >= 5.0.9",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Oracle.ManagedDataAccess >= 19.9.0"
     ]
   },
   "packageFolders": {
@@ -11955,6 +12100,22 @@
             "target": "Package",
             "version": "[2.0.35, )"
           },
+          "Dapper.FluentMap": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "Dapper.FluentMap.Dommel": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "Dommel": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.9, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -11971,6 +12132,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Oracle.ManagedDataAccess": {
+            "target": "Package",
+            "version": "[19.9.0, )"
           }
         },
         "imports": [
@@ -11986,5 +12151,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Oracle.ManagedDataAccess 19.9.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v2.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

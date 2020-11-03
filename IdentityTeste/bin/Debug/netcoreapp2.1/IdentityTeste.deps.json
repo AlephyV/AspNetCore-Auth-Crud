@@ -25,9 +25,14 @@
       "IdentityTeste/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.35",
+          "Dapper.FluentMap": "2.0.0",
+          "Dapper.FluentMap.Dommel": "2.0.0",
+          "Dommel": "2.1.0",
+          "LiteDB": "5.0.9",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "Oracle.ManagedDataAccess": "19.9.0"
         },
         "runtime": {
           "IdentityTeste.dll": {}
@@ -50,7 +55,75 @@
           "lib/netstandard2.0/Dapper.dll": {}
         }
       },
+      "Dapper.FluentMap/2.0.0": {
+        "dependencies": {
+          "Dapper": "2.0.35"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.FluentMap.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.FluentMap.dll": {}
+        }
+      },
+      "Dapper.FluentMap.Dommel/2.0.0": {
+        "dependencies": {
+          "Dapper": "2.0.35",
+          "Dapper.FluentMap": "2.0.0",
+          "Dommel": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.FluentMap.Dommel.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.FluentMap.Dommel.dll": {}
+        }
+      },
+      "Dommel/2.1.0": {
+        "dependencies": {
+          "Dapper": "2.0.35",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dommel.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dommel.dll": {}
+        }
+      },
+      "LiteDB/5.0.9": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.9.0",
+            "fileVersion": "5.0.9.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
+      "Oracle.ManagedDataAccess/19.9.0": {
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "4.122.19.1",
+            "fileVersion": "4.122.19.1"
+          }
+        },
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {},
       "System.Reflection.Emit.Lightweight/4.7.0": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
@@ -821,7 +894,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.1.1",
           "Microsoft.Extensions.Localization": "2.1.1",
-          "System.ComponentModel.Annotations": "4.5.0"
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {}
@@ -1354,7 +1427,7 @@
           "Microsoft.Extensions.Logging": "2.1.1",
           "Remotion.Linq": "2.2.0",
           "System.Collections.Immutable": "1.5.0",
-          "System.ComponentModel.Annotations": "4.5.0",
+          "System.ComponentModel.Annotations": "4.7.0",
           "System.Diagnostics.DiagnosticSource": "4.5.0",
           "System.Interactive.Async": "3.1.1"
         },
@@ -1674,7 +1747,7 @@
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.1.1",
           "Microsoft.Extensions.Logging": "2.1.1",
           "Microsoft.Extensions.Options": "2.1.1",
-          "System.ComponentModel.Annotations": "4.5.0"
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {}
@@ -1685,7 +1758,7 @@
         "dependencies": {
           "Microsoft.Extensions.Identity.Core": "2.1.1",
           "Microsoft.Extensions.Logging": "2.1.1",
-          "System.ComponentModel.Annotations": "4.5.0"
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll": {}
@@ -2307,9 +2380,6 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0"
         },
-        "compileOnly": true
-      },
-      "System.ComponentModel.Annotations/4.5.0": {
         "compileOnly": true
       },
       "System.Console/4.3.0": {
@@ -3179,12 +3249,54 @@
       "path": "dapper/2.0.35",
       "hashPath": "dapper.2.0.35.nupkg.sha512"
     },
+    "Dapper.FluentMap/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UFSBuYreRQqOQfzSJ2HOnLvBolg5VFfBjS30ohM8DT4Yra/m+bEKAjVTmCBM1VDahWsPSsKqjX5eLR37MB/O+Q==",
+      "path": "dapper.fluentmap/2.0.0",
+      "hashPath": "dapper.fluentmap.2.0.0.nupkg.sha512"
+    },
+    "Dapper.FluentMap.Dommel/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6qktNqAaxz/pJRqewU9ox0Sx3jyQUP+adYbFjxuYMjU5dofpcWzGZYCnv088FrOGs1h3qEZ3dv0Ec7YT0l3IYw==",
+      "path": "dapper.fluentmap.dommel/2.0.0",
+      "hashPath": "dapper.fluentmap.dommel.2.0.0.nupkg.sha512"
+    },
+    "Dommel/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-On4oTiGtDpqL0C1RHwYqwkrLT4r+ZptkgtLZjrJwqyzDB3MfhrzbV0vCYtoqYCmuCjnle74zvF9C3711g4ZUig==",
+      "path": "dommel/2.1.0",
+      "hashPath": "dommel.2.1.0.nupkg.sha512"
+    },
+    "LiteDB/5.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cWnNWXL+qaP/qrkUCYZHBUJcv+IsfJfofa+Ed4EyT0zs/gkXqfKvjTbS3uSMBfcd9I7Yf+q9YPmCpmVFrVGQtw==",
+      "path": "litedb/5.0.9",
+      "hashPath": "litedb.5.0.9.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "hashPath": "microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess/19.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3lz/XZRr3VB6SnDPGbFYkLuImMgtGzc2sYdZ9+Pc7txyBwq+Uke9CY9HR2mU23J8YT4Oud9tt9cbDzqYCNEsng==",
+      "path": "oracle.manageddataaccess/19.9.0",
+      "hashPath": "oracle.manageddataaccess.19.9.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
@@ -4557,13 +4669,6 @@
       "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
-      "path": "system.componentmodel.annotations/4.5.0",
-      "hashPath": "system.componentmodel.annotations.4.5.0.nupkg.sha512"
     },
     "System.Console/4.3.0": {
       "type": "package",
