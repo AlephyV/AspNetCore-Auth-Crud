@@ -29,9 +29,11 @@
           "Dapper.FluentMap.Dommel": "2.0.0",
           "Dommel": "2.1.0",
           "LiteDB": "5.0.9",
+          "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
+          "Microsoft.Owin": "4.1.1",
           "Oracle.ManagedDataAccess": "19.9.0"
         },
         "runtime": {
@@ -111,7 +113,35 @@
           "lib/netstandard2.0/LiteDB.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR.Client/2.4.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.19093"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
+      "Microsoft.Owin/4.1.1": {
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.25372.136"
+          }
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
       "Oracle.ManagedDataAccess/19.9.0": {
         "runtime": {
           "lib/net40/Oracle.ManagedDataAccess.dll": {
@@ -121,6 +151,17 @@
         },
         "compile": {
           "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "runtime": {
+          "lib/net40/Owin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net40/Owin.dll": {}
         }
       },
       "System.ComponentModel.Annotations/4.7.0": {},
@@ -3277,6 +3318,13 @@
       "path": "litedb/5.0.9",
       "hashPath": "litedb.5.0.9.nupkg.sha512"
     },
+    "Microsoft.AspNet.SignalR.Client/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x5Bc1LkjBZV9GEjflBF0zsKgXbpFkTAArQMAdbhKKC1MopLaFPUYQZrCAPgGSAW8OudHGhyEfMZ5vJbdBu8IsA==",
+      "path": "microsoft.aspnet.signalr.client/2.4.1",
+      "hashPath": "microsoft.aspnet.signalr.client.2.4.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3284,12 +3332,26 @@
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "hashPath": "microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512"
     },
+    "Microsoft.Owin/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KtjkRz4COQRqrwOBMf+XKW1ZsdiFMqipbmM0khhNJIx6U9VRprbwRGdSq1++PHlZrIwHMmwRHC0nILNSHGkcaA==",
+      "path": "microsoft.owin/4.1.1",
+      "hashPath": "microsoft.owin.4.1.1.nupkg.sha512"
+    },
     "Oracle.ManagedDataAccess/19.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3lz/XZRr3VB6SnDPGbFYkLuImMgtGzc2sYdZ9+Pc7txyBwq+Uke9CY9HR2mU23J8YT4Oud9tt9cbDzqYCNEsng==",
       "path": "oracle.manageddataaccess/19.9.0",
       "hashPath": "oracle.manageddataaccess.19.9.0.nupkg.sha512"
+    },
+    "Owin/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "path": "owin/1.0.0",
+      "hashPath": "owin.1.0.0.nupkg.sha512"
     },
     "System.ComponentModel.Annotations/4.7.0": {
       "type": "package",

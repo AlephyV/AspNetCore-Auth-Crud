@@ -1,8 +1,12 @@
 ﻿using IdentityTeste.Business;
+using IdentityTeste.Hubs;
 using IdentityTeste.Models;
 using IdentityTeste.Models.ViewModels.ProductViewModel;
+using Microsoft.AspNet.SignalR.Client;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +18,13 @@ namespace IdentityTeste.Controllers
     public class ProductController : Controller
     {
         private readonly ProductBusiness productBusiness;
+        private readonly IHubContext<ChatHub> _logHubContext;
         List<ProductListagemVM> listaProductsViewModel;
 
-        public ProductController()
+        public ProductController(IHubContext<ChatHub> loghub )
         {
             productBusiness = new ProductBusiness();
+            _logHubContext = loghub;
         }
 
         public IActionResult Atualizar(int id)
@@ -60,6 +66,7 @@ namespace IdentityTeste.Controllers
         {
             if (ModelState.IsValid)
             {
+                this._logHubContext.Clients.All.SendAsync("AcaoRecebida", User.Identity.Name, $"adicionou um novo produto as {DateTime.Now}");
                 productBusiness.Add(product);
                 this.listaProductsViewModel = this.productBusiness.ListaProdutos();
                 return View("Index", this.listaProductsViewModel);
@@ -78,6 +85,7 @@ namespace IdentityTeste.Controllers
         {
             if (ModelState.IsValid)
             {
+                this._logHubContext.Clients.All.SendAsync("AcaoRecebida", User.Identity.Name, $"atualizou um produto as {DateTime.Now}");
                 productBusiness.Update(product);
 
                 this.listaProductsViewModel = this.productBusiness.ListaProdutos();
@@ -92,6 +100,7 @@ namespace IdentityTeste.Controllers
 
         public IActionResult Delete(int id)
         {
+            this._logHubContext.Clients.All.SendAsync("AcaoRecebida", User.Identity.Name, $"deletou um produto as {DateTime.Now}");
             productBusiness.Delete(id);
             this.listaProductsViewModel = this.productBusiness.ListaProdutos();
 

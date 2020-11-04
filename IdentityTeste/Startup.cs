@@ -14,6 +14,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityTeste.Models;
 using IdentityTeste.IdentityDapper;
+using System.Net;
+using Microsoft.Owin;
+using Microsoft.AspNetCore.Owin;
+using IdentityTeste.Hubs;
+
+
+[assembly: OwinStartup(typeof(IdentityTeste.Startup))]
 
 namespace IdentityTeste
 {
@@ -33,8 +40,9 @@ namespace IdentityTeste
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
+                options.MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.None;
             });
+
 
 
             services.AddIdentity<IdentityUser, ApplicationUserRole>()
@@ -44,6 +52,8 @@ namespace IdentityTeste
               .AddRoleStore<MyRoleStore>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,11 +70,21 @@ namespace IdentityTeste
                 app.UseHsts();
             }
 
+            
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
+            app.UseStaticFiles();
+
+            app.UseSignalR(hubs =>
+            {
+                hubs.MapHub<ChatHub>("/chathub");
+                hubs.MapHub<LogHub>("/loghub");
+            });
 
             app.UseMvc(routes =>
             {
@@ -73,5 +93,7 @@ namespace IdentityTeste
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+
     }
 }

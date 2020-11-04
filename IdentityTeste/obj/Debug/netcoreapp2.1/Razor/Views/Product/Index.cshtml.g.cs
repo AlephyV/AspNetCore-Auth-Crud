@@ -24,7 +24,7 @@ using IdentityTeste.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3abe2a9988fd3ee59f860954b55e96dac78f5534", @"/Views/Product/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57d8a2ee80ead45e24e1ba4f7b65b768a675d805", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4305b998c3492b0d9b11f40cc9084cdcc3993e31", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<IdentityTeste.Models.ViewModels.ProductViewModel.ProductListagemVM>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Atualizar", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -153,7 +153,7 @@ using IdentityTeste.Models;
             WriteLiteral("</td>\n            <td>\n                ");
             EndContext();
             BeginContext(874, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "96ad2933b6e94640b7ae09e3f2aa909e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f202857174f4fb58a52f1c92aa37443", async() => {
                 BeginContext(931, 9, true);
                 WriteLiteral("Atualizar");
                 EndContext();
@@ -188,7 +188,7 @@ using IdentityTeste.Models;
             WriteLiteral(" |\n                ");
             EndContext();
             BeginContext(963, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "87826ba9e3ac4fb8bccdf0b93761d834", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2a7ee17fca9476383e7af31504d141e", async() => {
                 BeginContext(1017, 7, true);
                 WriteLiteral("Deletar");
                 EndContext();

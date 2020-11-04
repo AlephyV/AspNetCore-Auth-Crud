@@ -40,5 +40,8 @@ C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\
 C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\Razor\Views\Product\Atualizar.cshtml.g.cs
 C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\Razor\Views\Product\Cadastrar.cshtml.g.cs
 C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\bin\Debug\netcoreapp2.1\libman.json
+C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Index.cshtml.g.cs
+C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\Razor\Views\Log\Index.cshtml.g.cs
 C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\IdentityTeste.csproj.CoreCompileInputs.cache
 C:\Users\produ\source\repos\IdentityTeste\IdentityTeste\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
