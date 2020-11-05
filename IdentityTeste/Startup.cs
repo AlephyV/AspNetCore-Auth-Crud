@@ -84,6 +84,7 @@ namespace IdentityTeste
             {
                 hubs.MapHub<ChatHub>("/chathub");
                 hubs.MapHub<LogHub>("/loghub");
+                hubs.MapHub<BolaHub>("/bolahub");
             });
 
             app.UseMvc(routes =>

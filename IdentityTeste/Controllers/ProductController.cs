@@ -18,10 +18,10 @@ namespace IdentityTeste.Controllers
     public class ProductController : Controller
     {
         private readonly ProductBusiness productBusiness;
-        private readonly IHubContext<ChatHub> _logHubContext;
+        private readonly IHubContext<LogHub> _logHubContext;
         List<ProductListagemVM> listaProductsViewModel;
 
-        public ProductController(IHubContext<ChatHub> loghub )
+        public ProductController(IHubContext<LogHub> loghub )
         {
             productBusiness = new ProductBusiness();
             _logHubContext = loghub;

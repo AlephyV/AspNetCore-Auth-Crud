@@ -153,7 +153,7 @@ using IdentityTeste.Models;
             WriteLiteral("</td>\n            <td>\n                ");
             EndContext();
             BeginContext(874, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f202857174f4fb58a52f1c92aa37443", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd069f825fdb402b8f78e89b81198029", async() => {
                 BeginContext(931, 9, true);
                 WriteLiteral("Atualizar");
                 EndContext();
@@ -188,7 +188,7 @@ using IdentityTeste.Models;
             WriteLiteral(" |\n                ");
             EndContext();
             BeginContext(963, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2a7ee17fca9476383e7af31504d141e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a2c8e7af6db44d783155595796e67c5", async() => {
                 BeginContext(1017, 7, true);
                 WriteLiteral("Deletar");
                 EndContext();

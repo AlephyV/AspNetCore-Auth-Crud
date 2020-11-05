@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
+var connection = new signalR.HubConnectionBuilder().withUrl("/loghub").build();
 
 
 connection.on("AcaoRecebida", function (user, message) {
